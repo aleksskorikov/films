@@ -1,10 +1,10 @@
-
+@import './changeable';
+@import './templates';
 
 .conteiner{
     max-width: 1470px;
     padding: 0 10px;
     margin: 0 auto;
-    // border: 1px solid black;
 }
 .linc {
 
@@ -19,21 +19,11 @@
     // .linc__block-btn
 
     &__block-btn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 15rem;
-        height: 3rem;
-        background: rgb(108, 177, 214);
-        border-radius: 10px;
-        font-size: 1.5rem;
-        text-transform: uppercase;
-        color: black;
-        margin-top: 2rem;
-
+        @extend %btn;
+        background: $color-btn-bg1;
         &:hover {
-            background: rgb(50, 84, 103);
-            color: azure;
+            background: $color-btn-bg1-hover;
+            color:$color-btn;
         }
     }
 }
@@ -59,26 +49,8 @@
 
     // .search__block-gene
 
-    &__block-gene {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    // .search__block-year
-
-    &__block-year {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    // .search__block-rating
-
-    &__block-rating {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
+    &__block-gene, &__block-year, &__block-rating {
+        @extend %block-search;
     }
 }
 
@@ -86,57 +58,17 @@
 
     // .block__gene-lable
 
-    &__gene-lable {
+    &__gene-lable, &__year-lable, &__rating-lable {
         font-size: 2rem;
     }
 
-    // .block__year-lable
-
-    &__year-lable {
-        font-size: 2rem;
-    }
-
-    // .block__rating-lable
-
-    &__rating-lable {
-        font-size: 2rem;
-    }
-    &__rating-input{
-
-    }
-    &__gene-select{
-        width: 12rem;
-        height: 2rem;
-        background-color: rgb(215, 212, 212);
-        border: 1px solid gray;
-        border-radius: 8px;
-    }
-    &__year-select{
-        width: 12rem;
-        height: 2rem;
-        background-color: rgb(215, 212, 212);
-        border: 1px solid gray;
-        border-radius: 8px;
-    }
-    &__gene-option{
-
-    }
-    &__year-option{
-
-    }
-    &__rating-input{
-        
+    &__gene-select, &__year-select{
+        @extend %select;
     }
 }
 
 
 .film {
-
-    // .film__list-block
-
-    &__list-blocks {
-
-    }
 
     &__list-block{
         display: flex;
@@ -155,10 +87,6 @@
             background: rgb(213, 212, 210);
         }
     }
-
-    // .film__list-linc
-
-    &__list-linc {}
 
     // .film__list-img
 
@@ -184,14 +112,14 @@
 
     // .film__list-date
 
-    &__list-date {
+    &__list-date, &__list-rating {
         font-size: 1.4;
     }
 
     // .film__list-rating
 
     &__list-rating {
-        font-size: 1.4rem;
+        margin-bottom: 0.5rem;
     }
 
     &__list-data{
@@ -203,31 +131,11 @@
 
 .film {
 
-    // .film__list-block
-
-    &__list-block {}
-
     // .film__list-list
 
     &__list-list {
         text-align: center;
     }
-
-    // .film__list-title
-
-    &__list-title {}
-
-    // .film__list-date
-
-    &__list-date {}
-
-    // .film__list-data
-
-    &__list-data {}
-
-    // .film__list-rating
-
-    &__list-rating {}
 }
 
 .watchlater-img {
@@ -239,40 +147,22 @@
     // .watchlater__btns-look
 
     &__btns-look {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 15rem;
-        height: 3rem;
-        background: rgb(137, 238, 137);
-        border-radius: 10px;
-        font-size: 1.5rem;
-        text-transform: uppercase;
-        color: black;
+        @extend %btn;
+        background: $btns-look;
         margin: 0.5rem auto;
-    
         &:hover {
-            background: green;
-            color: azure;
+            background: $btns-look-hover;
+            color: $color-btn;
         }
     }
 
     &__btns-del{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 15rem;
-        height: 3rem;
+        @extend %btn;
         background: rgb(226, 106, 106);
-        border-radius: 10px;
-        font-size: 1.5rem;
-        text-transform: uppercase;
-        color: black;
         margin: 0.5rem auto;
-    
         &:hover {
             background:rgb(244, 68, 68);
-            color: azure;
+            color:$color-btn;
         }
     }
 }
@@ -283,21 +173,12 @@
     // .discription__btns-watchlater
 
     &__btns-watchlater {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 15rem;
-        height: 3rem;
-        background: rgb(137, 238, 137);
-        border-radius: 10px;
-        font-size: 1.5rem;
-        text-transform: uppercase;
-        color: black;
+        @extend %btn;
+        background: $btns-look;
         margin: 4rem auto;
-    
         &:hover {
-            background: green;
-            color: azure;
+            background: $btns-look-hover;
+            color: $color-btn;
         }
     }
 }

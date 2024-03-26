@@ -1,4 +1,5 @@
-
+@import './changeable';
+@import './templates';
 
 .detail {
 
@@ -7,10 +8,6 @@
     &__block {
         display: flex;
     }
-
-    // .detail__image
-
-    &__image {}
 
     // .detail__discription
 
@@ -26,39 +23,13 @@
 
     // .detail__discription-text
 
-    &__discription-text {
+    &__discription-text, &__discription-dete,
+    &__discription-genres, &__discription-duration,
+    &__discription-rating{
+        @extend %discription;
         font-size: 2rem;
         margin: 1rem 0;
     }
-
-    // .detail__discription-dete
-
-    &__discription-dete {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-    }
-
-    // .detail__discription-genres
-
-    &__discription-genres {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-    }
-
-    // .detail__discription-duration
-
-    &__discription-duration {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-    }
-
-    // .detail__discription-rating
-
-    &__discription-rating {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-    }
-    
 }
 .data{
     font-size: 1.5rem;
@@ -66,27 +37,15 @@
 }
 .discription {
 
-    // .discription__btns
-
-    &__btns {}
-
     // .discription__btns-look
 
     &__btns-look {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 15rem;
-        height: 3rem;
-        background: rgb(137, 238, 137);
-        border-radius: 10px;
-        font-size: 1.5rem;
-        text-transform: uppercase;
-        color: black;
+        @extend %btn;
+        background: $btns-look;
         margin-top: 2rem;
         &:hover{
-            background: green;
-            color: azure;
+            background: $btns-look-hover;
+            color:$color-btn;
         }
     }
 }

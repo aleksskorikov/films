@@ -1,0 +1,30 @@
+
+
+%btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 3rem;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: black;
+}
+
+%block-search{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+%select{
+    width: 12rem;
+    height: 2rem;
+    background-color: rgb(215, 212, 212);
+    border: 1px solid gray;
+    border-radius: 8px;
+}
+%discription{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
