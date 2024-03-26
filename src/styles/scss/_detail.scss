@@ -49,3 +49,43 @@
         }
     }
 }
+
+@media (max-width: 1025px) {
+    .detail {
+    
+            // .detail__block
+    
+            &__block {
+                display: grid;
+                justify-items: center;
+            }
+
+            // .detail__discription-title
+    
+            &__discription-title {
+                text-align: center
+            }
+    }
+        .discription {
+    
+            // .discription__btns-look
+    
+            &__btns {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+        }
+}
+@media (max-width: 420px) {
+    .detail__block-img{
+        width: 380px;
+    }
+}
+
+@media (max-width: 390px) {
+    .detail__block-img {
+        width: 300px;
+    }
+}

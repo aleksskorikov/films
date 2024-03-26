@@ -1,4 +1,4 @@
-.discription__btns-look, .discription__btns-watchlater, .watchlater__btns-del, .watchlater__btns-look, .linc__block-btn {
+.discription__btns-look, .discription__btns-watchlater, .watchlater__btns-del, .watchlater__btns-look, .linc__block-btn, .linc__block-btnd {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,10 +40,10 @@
   justify-content: space-around;
   align-items: center;
 }
-.linc__block-btn {
+.linc__block-btn, .linc__block-btnd {
   background: rgb(108, 177, 214);
 }
-.linc__block-btn:hover {
+.linc__block-btn:hover, .linc__block-btnd:hover {
   background: rgb(50, 84, 103);
   color: azure;
 }
@@ -58,6 +58,7 @@
 .search__block {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 10%;
   margin: 3rem 0;
 }
@@ -135,7 +136,33 @@
   color: azure;
 }
 
-.discription__btns-look, .linc__block-btn, .watchlater__btns-look, .watchlater__btns-del, .discription__btns-watchlater {
+@media (max-width: 1285px) {
+  .search__block-rating {
+    margin-top: 1rem;
+  }
+}
+@media (max-width: 769px) {
+  .linc__block {
+    display: grid;
+    justify-items: center;
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .linc__block-btn {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .search__block {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .search__block-rating {
+    margin-top: 0;
+  }
+  .search__block-year {
+    margin: 1rem 0;
+  }
+}
+.discription__btns-look, .linc__block-btn, .linc__block-btnd, .watchlater__btns-look, .watchlater__btns-del, .discription__btns-watchlater {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -194,6 +221,31 @@
   color: azure;
 }
 
+@media (max-width: 1025px) {
+  .detail__block {
+    display: grid;
+    justify-items: center;
+  }
+  .detail__discription-title {
+    text-align: center;
+  }
+  .discription__btns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+@media (max-width: 420px) {
+  .detail__block-img {
+    width: 380px;
+  }
+}
+@media (max-width: 390px) {
+  .detail__block-img {
+    width: 300px;
+  }
+}
 body {
   background: whitesmoke;
 }

@@ -68,7 +68,7 @@ const MovieList = () => {
             <div className="linc__block">
                 <Link to={`/Watchlater`} className="linc__block-btn">Watchlater</Link>
                 <h2 className='movie__list-title'>Movie List</h2>
-                <Link to={`/viewed`}  className="linc__block-btn">viewed</Link>
+                <Link to={`/viewed`}  className="linc__block-btnd">viewed</Link>
             </div>
 
             <div className="search__block">
@@ -102,8 +102,6 @@ const MovieList = () => {
                         onChange={(event) => handleRatingChange(event, [selectedRating[0], parseInt(event.target.value)])} 
                     />
                     <span>{selectedRating[0]} - {selectedRating[1]}</span>
-                    
-                    
                 </div>
             </div>
 

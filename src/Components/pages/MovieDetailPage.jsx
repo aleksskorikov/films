@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import ReactPlayer from 'react-player';
 import fetchMovieDetails from '../../CustomHook/fetchMovieDetails';
 import { Link } from 'react-router-dom';
+import '../../styles/scss/_filmList.scss'
 
 
 const MovieDetailPage = () => {
@@ -44,7 +45,7 @@ const MovieDetailPage = () => {
         <div className='conteiner'>
             <div className="detail__block">
                 <div className="detail__image">
-                    <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title} />
+                    <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title} className="detail__block-img"/>
                 </div>
                 <div className="detail__discription">
                     <h2 className="detail__discription-title">{movie.title}</h2>

@@ -18,7 +18,7 @@
 
     // .linc__block-btn
 
-    &__block-btn {
+    &__block-btn, &__block-btnd {
         @extend %btn;
         background: $color-btn-bg1;
         &:hover {
@@ -43,6 +43,7 @@
     &__block {
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
         gap: 10%;
         margin: 3rem 0;
     }
@@ -180,5 +181,50 @@
             background: $btns-look-hover;
             color: $color-btn;
         }
+    }
+}
+
+@media (max-width: 1285px){
+    .search {  
+        // .search__block-gene
+
+        &__block-rating {
+            margin-top: 1rem;
+        }
+    }
+}
+  
+@media (max-width: 769px) {
+
+    .linc {
+    
+        // .linc__block
+
+        &__block {
+            display: grid;
+            justify-items: center;
+            grid-template-rows: repeat(3, 1fr);
+        }
+
+        // .linc__block-btn
+
+        &__block-btn {
+            grid-column: 1;
+            grid-row: 2;
+        }
+
+    }
+
+    .search {
+    &__block {
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+    }
+    &__block-rating {
+        margin-top: 0;
+    }
+    &__block-year{
+        margin: 1rem 0;
+    }
     }
 }
