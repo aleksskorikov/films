@@ -1,6 +1,6 @@
 
 const fetchMovieDetails = async (movieId) => {
-    const apiKey = 'a34e5b3dbdd2ea6ab5890459f3a8c8fd'; // Ваш ключ API TMDB
+    const apiKey = 'a34e5b3dbdd2ea6ab5890459f3a8c8fd'; 
     const url = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}&language=en-US`;
 
     try {
